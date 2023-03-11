@@ -28,9 +28,10 @@ stages:
               SonarCloud: 'SONAR_TOKEN_AZURE'
               organization: 'lajuruiz'
               scannerMode: 'MSBuild'
-              projectKey: 'calculator_practica_devops'
+              projectKey: 'lajuruiz_calculator-practica-devops'
               projectName: 'calculator_practica_devops'
           - task: SonarCloudPublish@1
             inputs:
               pollingTimeoutSec: '300'
 
+              mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=lajuruiz_calculator-practica-devops
