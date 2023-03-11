@@ -33,5 +33,3 @@ stages:
           - task: SonarCloudPublish@1
             inputs:
               pollingTimeoutSec: '300'
-
-              mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=lajuruiz_calculator-practica-devops
