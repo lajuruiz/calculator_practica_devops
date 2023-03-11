@@ -22,4 +22,13 @@ stages:
                 jdkArchitectureOption: 'x64'
                 publishJUnitResults: true
                 testResultsFiles: '**/TEST-*.xml'
+          
+          - task: SonarCloudPrepare@1
+            inputs:
+              SonarCloud: 'SONAR_TOKEN_AZURE'
+              organization: 'lajuruiz'
+              scannerMode: 'MSBuild'
+              projectKey: 'calculator_practica_devops'
+              projectName: 'calculator_practica_devops'
+              
 
